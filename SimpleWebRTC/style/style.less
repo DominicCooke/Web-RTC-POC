@@ -1,0 +1,88 @@
+.hidden {
+    display: none;
+}
+body {
+    background: linear-gradient(to bottom, #071a1e 0%, #274249 100%);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+.information {
+    padding: 5px;
+    #title {}
+    #subtitle {}
+}
+.webcam-area {
+    display: flex;
+    .video-container {
+        width: 300px;
+        height: 230px;
+        margin: 50px;
+        padding: 10px;
+        border: 1px solid white;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 5%;
+        &:before {
+            position: absolute;
+            background: #274249;
+            height: 20px;
+            width: 40px;
+            text-align: center;
+            bottom: -15px;
+            border: 1px solid white;
+            border-radius: 5%;
+        }
+        &.local {
+            &:before {
+                content: "local";
+            }
+        }
+        &.peer {
+            &:before {
+                content: "peer";
+                right: 10px;
+            }
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+        meter {
+            position: absolute;
+            height: 5px;
+            width: 70%;
+            left: 15%;
+            bottom: 20px;
+            display: inline-block;
+        }
+    }
+}
+.screenshare-area {
+    .screen-container {
+        width: 300px;
+        height: 230px;
+        margin: 50px;
+        padding: 10px;
+        border: 1px solid white;
+        box-sizing: border-box;
+        position: relative;
+        border-radius: 5%;
+        &:before {
+            position: absolute;
+            background: #274249;
+            height: 20px;
+            width: 140px;
+            text-align: center;
+            bottom: -15px;
+            border: 1px solid white;
+            border-radius: 5%;
+            content:"Your shared screen";
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

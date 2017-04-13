@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/simplewebrtc.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/file.js"></script>
+</head>
+
+<body>
+   <a target="_blank" href="https://gw-vm-tech:8888">Please make sure that you have allowed https://gw-vm-tech:8888 through the chrome security!</a>
+    <div class="information">
+        <div id="title">Room:</div>
+        <div id="subTitle">Link to join:</div>
+    </div>
+
+    <div class="webcam-area">
+        <div class="local video-container">
+            <video id="local-video"></video>
+            <meter id="localVolume" class="volume hidden" min="-45" max="-20" high="-25" low="-40"></meter>
+        </div>
+    </div>
+
+    <div class="screenshare-area">
+        <div class="screen-container" style="display: none;"></div>
+    </div>
+
+    <div class="file-transfer"></div>
+
+    <form id="createRoom">
+        <input id="sessionInput">
+    </form>
+    <button id="formSubmit" onclick="createRoom()">Create it!</button>
+    <button id="screenShareButton">Share screen</button>
+</body>
+
+</html>
